@@ -1,6 +1,6 @@
 # 一、Docker介绍
 
-	## 	1. 下载Docker依赖的环境
+## 1. 下载Docker依赖的环境
 
 ~~~shell
 	#想安装Docker，需要先将依赖的环境全部下载下来，就像Maven依赖JDK一样：
@@ -68,7 +68,7 @@ systemctl restart docker
 
 # 三、镜像的制作
 
-	## 	1. 拉取镜像
+## 1. 拉取镜像
 
 ​			从中央仓库拉取镜像到本地
 
@@ -114,7 +114,7 @@ systemctl restart docker
 
 # 四、容器的操作
 
-		## 	1. 运行容器
+## 1. 运行容器
 
 ​			运行容器需要定制具体镜像，如果镜像不存在，会直接下载
 
@@ -126,7 +126,7 @@ systemctl restart docker
 	
 ~~~
 
-				## 	2. 查看正在运行的容器
+## 2. 查看正在运行的容器
 
 ​			查看全部正在运行的容器信息
 
@@ -137,7 +137,7 @@ systemctl restart docker
 	#-q 只查看容器标识
 ~~~
 
-			## 	3. 查看容器日志
+## 3. 查看容器日志
 
 ​			查看容器日志，以查看容器运行的信息
 
@@ -146,7 +146,7 @@ systemctl restart docker
 	#-f 查看日志的末尾几行
 ~~~
 
-			## 	4. 进入容器的内部
+## 4. 进入容器的内部
 
 ​			可以进入容器的内部进行操作
 
@@ -185,7 +185,7 @@ systemctl restart docker
 
 # 五、Docker的应用
 
-			## 	1. 安装Tomcat
+## 1. 安装Tomcat
 
 ​			运行Tomcat容器
 
@@ -195,7 +195,7 @@ systemctl restart docker
 	#也可以运行本地已经制作的镜像
 ~~~
 
-		## 	2. 运行Mysql容器
+## 2. 运行Mysql容器
 
 ~~~shell
 	#运行网络源中镜像
