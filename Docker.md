@@ -95,9 +95,7 @@ systemctl restart docker
 	docker rmi 镜像标识
 ~~~
 
------------------------------
-
-		## 	4.镜像的导入、导出
+## 4. 镜像的导入、导出
 
 ​			如果因为网络原因可以通过硬盘的方式传输镜像，虽然不规范，但是有效，但是这种方式导出的镜像名称和版本都是null，需要手动修改
 
@@ -314,7 +312,7 @@ systemctl restart docker
 
 ## 2. 管理Mysql和Tomcat容器
 
-~~~shell
+~~~yml
 	#yml文件以key:value方式来指定配置信息
 	#多个配置信息以换行+缩进的方式来区分
 	#在docker-compose.yml文件中，不要使用制表符
@@ -367,7 +365,7 @@ services:
 
 ### 4.1 docker-compose文件
 
-~~~shell
+~~~yml
 	# 编写docker-compose文件
     # yml文件
     version: '3.1'
