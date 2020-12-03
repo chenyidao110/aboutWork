@@ -49,7 +49,7 @@ end;
 ~~~sql
 create or replace procedure insert_dept(
 	num_deptno in number,
-	var_ename in varchar2,
+	var_dname in varchar2,
 	var_loc in varchar2) is
 begin
 	insert into dept 
