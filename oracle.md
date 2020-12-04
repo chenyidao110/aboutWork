@@ -76,7 +76,7 @@ begin
 	from dept
 	where deptno = num_deptno;
 exception
-	where no_data_found then
+	when no_data_found then
 	dbms_output.put_line('该部门编号的不存在!');
 end;
 /
@@ -88,7 +88,7 @@ declare
 	var_loc dept.loc%type;
 begin
 	select_dept(99,var_dname,var_loc);
-	dbms_output.put_line(var_dname || '位于: ') || var_loc);
+	dbms_output.put_line(var_dname || '位于: ' || var_loc);
 endl;
 /
 
@@ -111,9 +111,10 @@ exec select_dept(15,:var_dname,:var_loc);
 create or replace procedure pro_square(
 	num in out number,
 	flag in boolean) is
+	i int :=2;
 begin
 	if flag then
-		num := power(num);
+		num := power(num,i);
 	else
 		num := sqrt(num);
 	end if;
@@ -148,7 +149,7 @@ create or replace procedure insert_dept(
 	var_dname in varchar2 default '综合部',
 	var_loc in varchar2 default '北京') is
 begin
-	insert int dept values(num_deptno,var_dname,var_loc);
+	insert into dept values(num_deptno,var_dname,var_loc);
 end;
 /
 
