@@ -202,7 +202,7 @@ END IF;
 ## 2. 触发器分类
 
 - 行级触发器：当DML语句对每一行数据进行操作时都会引起该触发器的运行
-- 语句级触发器：无论DML语句影响多少行数据，其所引起的触发器只执行一行。
+- 语句级触发器：无论DML语句影响多少行数据，其所引起的触发器只执行一次。
 - 替换触发器：该触发器是定义在视图上的，而不是定义在表上，它是用来替换所使用实际语句的触发器
 - 用户事件触发器：是指与DDL操作或用户登录、退出数据库等事件相关的触发器。如用户登录到数据库或使用ALTER语句修改表结构等事件的触发器。
 - 系统事件触发器：是指在Oracle数据库系统的事件中进行触发的触发器，如Orale实例的启动与关闭。
@@ -294,7 +294,7 @@ create or replace trigger tri_insert_view
 	on view_emp_dept
 	for each row
 declare
-	row_dept dept%type
+	row_dept dept%rowtype;
 begin
 	select * into row_dept from dept where deptno = :new.deptno;
 	if sql%notfound then	---未检索到该部门编号的记录
