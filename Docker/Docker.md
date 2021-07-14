@@ -51,7 +51,7 @@
   		3.    
 
 ~~~shell
-在公司内部会采用私服的方式拉取镜像（添加配置）
+#在公司内部会采用私服的方式拉取镜像（添加配置）
 #需要创建 /etc/docker/daemon.json，并添加如下内容
 {	
 	"registry-mirrors":["https://registry.docker-cn.com"],	
